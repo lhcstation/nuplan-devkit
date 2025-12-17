@@ -1,0 +1,98 @@
+[build-system]
+requires = [
+    "setuptools==59.5.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nuplan-devkit"
+version = "1.2.0"
+description = "The official devkit of the nuPlan dataset (www.nuPlan.org)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+
+authors = [
+    { name = "The nuPlan team @ Motional", email = "nuscenes@motional.com" }
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Operating System :: OS Independent",
+    "License :: Free for non-commercial use"
+]
+
+dependencies = [
+    "aioboto3",
+    "aiofiles",
+    "bokeh==2.4.3",
+    "boto3==1.24.59",
+    "cachetools",
+    "casadi",
+    "control==0.9.1",
+    "coverage",
+    "docker",
+    "Fiona",
+    "geopandas>=0.12.1",
+    "grpcio==1.43.0",
+    "grpcio-tools==1.43.0",
+    "guppy3==3.1.2",
+    "hydra-core",
+    "hypothesis",
+    "joblib",
+    "jupyter",
+    "jupyterlab",
+    "matplotlib",
+    "mock",
+    "moto",
+    "nest_asyncio",
+    "numpy=1.26.4",
+    "opencv-python",
+    "pandas",
+    "Pillow",
+    "pre-commit",
+    "psutil",
+    "pyarrow",
+    "pyinstrument",
+    "pyogrio",
+    "pyquaternion>=0.9.5",
+    "pytest",
+    "rasterio",
+    "ray",
+    "requests",
+    "retry",
+    "rtree",
+    "s3fs",
+    "scipy",
+    "selenium",
+    "Shapely>=2.0.0",
+    "SQLAlchemy==1.4.27",
+    "sympy",
+    "testbook",
+    "tornado",
+    "tqdm",
+    "typer",
+    "ujson",
+    "urllib3"
+]
+
+[project.urls]
+Homepage = "https://github.com/motional/nuplan-devkit"
+Repository = "https://github.com/motional/nuplan-devkit"
+
+[project.scripts]
+nuplan_cli = "nuplan.cli.nuplan_cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+exclude = [
+    "*test",
+    "bazel-nuplan_devkit*",
+    "bazel-nuplan-devkit*"
+]
+
+[tool.setuptools.package-data]
+"" = ["*.json"]
