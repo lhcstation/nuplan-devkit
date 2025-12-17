@@ -1,9 +1,7 @@
 [build-system]
-requires = [
-    "setuptools==59.5.0",
-    "wheel"
-]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
 
 [project]
 name = "nuplan-devkit"
@@ -94,5 +92,6 @@ exclude = [
     "bazel-nuplan-devkit*"
 ]
 
+
 [tool.setuptools.package-data]
-"" = ["*.json"]
+"*" = ["*.json"]
