@@ -94,4 +94,4 @@ exclude = [
 
 
 [tool.setuptools.package-data]
-"*" = ["**/*.yaml", "**/*.yml", "**/*.json"]
+"*" = ["**/*.yaml", "**/*.yml", "**/*.json", "**/*.html"]
